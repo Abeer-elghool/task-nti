@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="index.php" method="post">
+        <form action="index.php" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -21,7 +21,11 @@
             <div class="mb-3">
                 <label for="url" class="form-label">linkedin link</label>
                 <input type="text" name="url" class="form-control" id="url" aria-describedby="emailHelp">
-                <div id="urlHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div id="urlHelp" class="form-text">We'll never share your data with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload your CV</label>
+                <input class="form-control" type="file" id="formFile" name="formFile">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
