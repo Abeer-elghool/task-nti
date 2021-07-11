@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
+
+<div class="container-fluid" style="margin-top: 100px">
+    <div class="row justify-content-center">
+        <h3>Books Store</h3>
+<?php
+$book_arr = [
+    ["id" => "1", "name"=>"clean code", "desc"=>"Some quick example text to build on the card title and make up the bulk of the card\'s content.", "image" => "images/clean-code.jpg"],
+    ["id" => "2", "name"=>"java", "desc"=>"Some quick example text to build on the card title and make up the bulk of the card\'s content.", "image" => "images/java.jpg"],
+    ["id" => "3", "name"=>"java", "desc"=>"Some quick example text to build on the card title and make up the bulk of the card\'s content.", "image" => "images/java.jpg"],
+    ["id" => "4", "name"=>"php", "desc"=>"Some quick example text to build on the card title and make up the bulk of the card\'s content.", "image" => "images/php.jpg"],
+    ["id" => "5", "name"=>"php", "desc"=>"Some quick example text to build on the card title and make up the bulk of the card\'s content.", "image" => "images/php.jpg"],
+    ["id" => "6", "name"=>"php2", "desc"=>"Some quick example text to build on the card title and make up the bulk of the card\'s content.", "image" => "images/php2.jpg"],
+    ["id" => "7", "name"=>"clean code", "desc"=>"Some quick example text to build on the card title and make up the bulk of the card\'s content.", "image" => "images/clean-code.jpg"],
+    ["id" => "8", "name"=>"clean code", "desc"=>"Some quick example text to build on the card title and make up the bulk of the card\'s content.", "image" => "images/clean-code.jpg"],
+];
+for($i=0;$i< count($book_arr);$i++){
+?>
+<div class="card" style="width: 18rem;">
+    <img src='<?php echo $book_arr[$i]["image"]?>' class="card-img-top" alt="..." style="height: 270px">
+    <div class="card-body">
+        <h5 class="card-title"><?php echo $book_arr[$i]["name"]?></h5>
+        <p class="card-text"><?php echo $book_arr[$i]["desc"]?></p>
+        <a href="#" class="btn btn-primary">add to cart</a>
+    </div>
+</div>
+<?php
+}
+?>
+    </div>
+</div>
 </body>
 </html>
